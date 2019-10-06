@@ -1,0 +1,37 @@
+{
+    "jupyter.lab.setting-icon-class": "jp-SettingsIcon",
+    "jupyter.lab.setting-icon-label": "Custom CSS",
+    "title": "Custom CSS",
+    "description": "Custom CSS settings",
+    "properties": {
+        "rules": {
+            "title": "CSS rules",
+            "description": "CSS rules to be inserted into the HTML page",
+            "items": { "$ref": "#/definitions/rule" },
+            "type": "array",
+            "default": []
+        }
+    },
+    "additionalProperties": false,
+    "type": "object",
+    "definitions": {
+        "rule": {
+            "title": "Rule definition",
+            "properties": {
+                "selector": {
+                    "title": "CSS selector",
+                    "type": "string"
+                },
+                "styles": {
+                    "title": "Style definition",
+                    "description": "Style definitions for the selector",
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "minItems": 1
+                }
+            },
+            "required": ["selector", "styles"],
+            "type": "object"
+        }
+    }
+}
