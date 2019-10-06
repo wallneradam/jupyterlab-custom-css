@@ -34,7 +34,7 @@ const extension: JupyterFrontEndPlugin<void> = {
             for (let rule of rules) {
                 styles += `${rule.selector} \{`;
                 styles += "\n  " + rule.styles.join(";\n  ")
-                styles += "\n}";
+                styles += "\n}\n";
             }
             document.body.removeChild(styleElement);
             styleElement.innerHTML = styles;
