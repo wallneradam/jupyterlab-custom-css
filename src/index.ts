@@ -33,7 +33,7 @@ const extension: JupyterFrontEndPlugin<void> = {
             let rules = settings.composite.rules as ICSSRule[];
             for (let rule of rules) {
                 styles += `${rule.selector} \{`;
-                styles += "\n  " + rule.styles.join("\n  ")
+                styles += "\n  " + rule.styles.join(";\n  ")
                 styles += "\n}";
             }
             document.body.removeChild(styleElement);

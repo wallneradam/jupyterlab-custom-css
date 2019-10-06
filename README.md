@@ -14,7 +14,7 @@ E.g. if you want to change the maximum output size in scrolled mode:
         {
             "selector": ".jp-CodeCell.jp-mod-outputsScrolled .jp-Cell-outputArea",
             "styles": [
-                "max-height: 300px;"
+                "max-height: 300px"
             ]
         }
     ]
