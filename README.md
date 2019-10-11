@@ -43,9 +43,33 @@ When you save changes it will immediately be active, so you don't need to restar
 }
 ```
 
-### Reorder tool bar buttons
+### Decrease output font size and make the same font for rendered HTML
 
-You can even reorder toolbar buttons and tabs by CSS:
+```javascript
+{
+    "rules": [
+        {
+            "selector": ".jp-OutputArea-output.jp-RenderedText pre, .jp-OutputArea-output.jp-RenderedHTMLCommon",
+            "styles": [
+                "font-family: var(--jp-code-font-family)", // Make font the same as code font
+                "font-size: 90%"  // Make font smaller
+            ]
+        },
+
+        // Make tables the same font size as the other outputs
+        {
+            "selector": ".jp-RenderedHTMLCommon table",
+            "styles": [
+                "font-size: inherit !important" // Make use the same size
+            ]
+        },
+    ]
+}
+```
+
+### Reorder sidebar icons
+
+You can even reorder sidebar icons and tabs by CSS:
 
 ```javascript
 {
@@ -82,7 +106,23 @@ You can even reorder toolbar buttons and tabs by CSS:
 }
 ```
 
-Same technic could be good for menu entries (not tested).
+Same technic could be good for menu entries and toolbar buttons (not tested).
+
+### Grayscale icon if the extension has color icon (which is awful, because every other icons are monochrome)
+
+```javascript
+{
+    "rules": [
+        // HDF5 toolbar icon
+        {
+            "selector": ".jp-HdfIcon",
+            "styles": [
+                "filter: grayscale(1) brightness(3.5)"
+            ]
+        },
+    ]
+}
+```
 
 ## Prerequisites
 
