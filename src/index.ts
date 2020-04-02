@@ -1,8 +1,8 @@
 const PLUGIN_NAME = "@wallneradam/custom_css";
 
 import { JupyterFrontEnd, JupyterFrontEndPlugin } from '@jupyterlab/application';
-import { ISettingRegistry } from '@jupyterlab/coreutils';
-import { JSONObject } from '@phosphor/coreutils';
+import { ISettingRegistry } from '@jupyterlab/settingregistry';
+import { JSONObject } from '@lumino/coreutils';
 
 
 interface ICSSRule extends JSONObject {
