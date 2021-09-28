@@ -1,18 +1,20 @@
 {
   "name": "@wallneradam/custom_css",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Allow to insert custom css into JupyterLab",
   "keywords": [
     "jupyter",
     "jupyterlab",
     "jupyterlab-extension"
   ],
-  "homepage": "https://github.com/wallneradam/jupyterlab-custom-css.git",
-  "bugs": {
-    "url": "https://github.com/wallneradam/jupyterlab-custom-css.git/issues"
-  },
+  "homepage": "https://github.com/wallneradam/jupyterlab-custom-css",
+  "bugs": "https://github.com/wallneradam/jupyterlab-custom-css/issues",
   "license": "BSD-3-Clause",
   "author": "Adam Wallner",
+  "contributors": [{
+    "name": "Marc Edwards",
+    "url": "https://github.com/alwaysmpe"
+  }],
   "files": [
     "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
     "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}",
@@ -21,10 +23,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "style": "style/index.css",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wallneradam/jupyterlab-custom-css.git.git"
-  },
+  "repository": "github:wallneradam/jupyterlab-custom-css",
   "scripts": {
     "build": "tsc",
     "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo",
@@ -32,11 +31,11 @@
     "watch": "tsc -w"
   },
   "dependencies": {
-    "@jupyterlab/application": "^2.0.2"
+    "@jupyterlab/application": "^3.1.13"
   },
   "devDependencies": {
     "rimraf": "^3.0.2",
-    "typescript": "~3.8.3"
+    "typescript": "~4.1.3"
   },
   "sideEffects": [
     "style/*.css"
