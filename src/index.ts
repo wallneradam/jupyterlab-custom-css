@@ -20,9 +20,8 @@ const extension: JupyterFrontEndPlugin<void> = {
         console.log('JupyterLab extension custom_css is activated!');
 
         let styleElement = document.createElement("style");
-        styleElement.type = "text/css";
         styleElement.id = PLUGIN_NAME;
-        document.body.appendChild(styleElement);
+        document.head.appendChild(styleElement);
 
         /**
          * Update settings on change
@@ -36,9 +35,9 @@ const extension: JupyterFrontEndPlugin<void> = {
                 styles += "\n  " + rule.styles.join(";\n  ")
                 styles += "\n}\n";
             }
-            document.body.removeChild(styleElement);
+            document.head.removeChild(styleElement);
             styleElement.innerHTML = styles;
-            document.body.appendChild(styleElement);
+            document.head.appendChild(styleElement);
         }
 
         // Load settings
